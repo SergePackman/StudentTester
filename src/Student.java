@@ -1,42 +1,52 @@
 public class Student {
-    private int studentId;
-    private String name;
-    private String ssn;
+    private int stuId;
+    private String fName;
+    private String lName;
+    private String stuStatus;
     private Double gpa;
     public final int SchCode = 34958;
 
-    public Student(int i, String n, String s, Double g){
-        studentId = i;
-        name = n;
-        ssn = s;
-        gpa = g;
+    public Student(int i, String f, String l, String s){
+        stuId = i;
+        fName = f;
+        lName = l;
+        stuStatus = s;
     }
 
-    public int getStudentId() {
-        return studentId;
+    public int getId() {
+        return stuId;
     }
-    public void setStudentId(int x) {
-        studentId = x;
-    }
-
-    public String getStudentName() {
-        return name;
-    }
-    public void setStudentName(String x) {
-        name = x;
+    public void setId(int x) {
+        stuId = x;
     }
 
-    public String getStudentSsn() {
-        return ssn;
+    public String getfName() {
+        return fName;
     }
-    public void setStudentSsn(String x){
-        ssn = x;
+    public void setfName(String x) {
+        fName = x;
     }
 
-    public Double getStudentGpa() {
-        return gpa;
+    public String getlName() {
+        return lName;
     }
-    public void setStudentGpa(Double x){
-        gpa = x;
+    public void setlName(String x){
+        lName = x;
+    }
+
+    public String getstuStatus() {
+        return stuStatus;
+    }
+    public void setstuStatus(String x){
+        stuStatus = x;
+    }
+
+    public String toString(){
+        String s1 = "";
+        s1 =    "Student ID: \t"+getId()+"\n"+
+                "Student Name:\t"+getfName()+" "+getlName()+"\n"+
+                "Student Status:\t"+getstuStatus()+"\n"+
+                "- - - - - - - - -";
+        return s1;
     }
 }
